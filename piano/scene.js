@@ -165,11 +165,11 @@ const createScene = async function(engine) {
         enablePointerSelectionOnAllControllers: true        
     });
 
-    const ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 400, height: 400});
+//     const ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 400, height: 400});
 
     featuresManager.enableFeature(BABYLON.WebXRFeatureName.TELEPORTATION, "stable", {
         xrInput: xrHelper.input,
-        floorMeshes: [ground],
+//         floorMeshes: [ground],
         snapPositions: [new BABYLON.Vector3(2.4*3.5*scale, 0, -10*scale)],
     });
 
