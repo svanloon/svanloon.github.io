@@ -156,7 +156,11 @@ const createScene = async function(engine) {
         }
     });
 
-    const xrHelper = await scene.createDefaultXRExperienceAsync();
+    const xrHelper = await scene.createDefaultXRExperienceAsync({
+        uiOptions: {
+            sessionMode: "immersive-ar"
+        }
+    });
 
     const featuresManager = xrHelper.baseExperience.featuresManager;
 
