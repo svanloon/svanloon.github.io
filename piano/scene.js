@@ -167,6 +167,10 @@ const createScene = async function(engine) {
         enablePointerSelectionOnAllControllers: true        
     });
 
+    featuresManager.enableFeature(BABYLON.WebXRFeatureName.HAND_TRACKING, "latest", {
+        xrInput: xrHelper.input,
+    });
+
 //     const ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 400, height: 400});
 
     featuresManager.enableFeature(BABYLON.WebXRFeatureName.TELEPORTATION, "stable", {
