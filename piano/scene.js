@@ -164,9 +164,16 @@ const createScene = async function(engine) {
 
     const featuresManager = xrHelper.baseExperience.featuresManager;
 
-    featuresManager.enableFeature(BABYLON.WebXRFeatureName.POINTER_SELECTION, "stable", {
-        xrInput: xrHelper.input,
-        enablePointerSelectionOnAllControllers: true        
+//     featuresManager.enableFeature(BABYLON.WebXRFeatureName.POINTER_SELECTION, "stable", {
+//         xrInput: xrHelper.input,
+//         enablePointerSelectionOnAllControllers: true        
+//     });
+
+    featureManager.enableFeature(BABYLON.WebXRFeatureName.HAND_TRACKING, "latest", {
+      xrInput: xrHelper.input,
+      jointMeshes: {
+        disableDefaultHandMesh: true,
+      },
     });
 
 //     const ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 400, height: 400});
