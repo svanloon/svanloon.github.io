@@ -3,7 +3,6 @@ const buildKey = function (scene, parent, props) {
         /*
         Props for building a white key should contain: 
         note, topWidth, bottomWidth, topPositionX, wholePositionX, register, referencePositionX
-
         As an example, the props for building the middle C white key would be
         {type: "white", note: "C", topWidth: 1.4, bottomWidth: 2.3, topPositionX: -0.45, wholePositionX: -14.4, register: 4, referencePositionX: 0}
         */
@@ -29,7 +28,6 @@ const buildKey = function (scene, parent, props) {
         /*
         Props for building a black key should contain: 
         note, wholePositionX, register, referencePositionX
-
         As an example, the props for building the C#4 black key would be
         {type: "black", note: "C#", wholePositionX: -13.45, register: 4, referencePositionX: 0}
         */
@@ -169,13 +167,6 @@ const createScene = async function(engine) {
         enablePointerSelectionOnAllControllers: true        
     });
 
-    featureManager.enableFeature(BABYLON.WebXRFeatureName.HAND_TRACKING, "latest", {
-        xrInput: xrHelper.input,
-        jointMeshes: {
-            disableDefaultHandMesh: true,
-        },
-    });
-
 //     const ground = BABYLON.MeshBuilder.CreateGround("ground", {width: 400, height: 400});
 
     featuresManager.enableFeature(BABYLON.WebXRFeatureName.TELEPORTATION, "stable", {
@@ -186,4 +177,3 @@ const createScene = async function(engine) {
 
     return scene;
 }
-
